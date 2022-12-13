@@ -1,0 +1,5 @@
+require("settings")
+require("colorscheme")
+require("autocommands")
+require("mappings")
+require("plugin")
