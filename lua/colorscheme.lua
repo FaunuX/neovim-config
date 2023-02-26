@@ -1,2 +1,2 @@
 vim.g.sonokai_style = 'shusia'
-vim.cmd('colorscheme sonokai')
+vim.cmd('colorscheme PaperColor')

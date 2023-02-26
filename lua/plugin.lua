@@ -12,7 +12,7 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 require('packer').startup(function(use)
-use 'wbthomason/packer.nvim'
+	use 'wbthomason/packer.nvim'
 	use 'sainnhe/sonokai'
 	use 'NLKNguyen/papercolor-theme'
 	use 'tpope/vim-surround'
@@ -53,8 +53,25 @@ require("toggleterm").setup({
 	direction="float"
 })
 
+local Terminal  = require('toggleterm.terminal').Terminal
+local wordle = Terminal:new({ cmd = "ssh clidle.duckdns.org -p 3000", hidden = true })
+
+function _wordle_toggle()
+	wordle:toggle()
+end
+
+vim.api.nvim_set_keymap("n", "<leader>wor", "<cmd>lua _wordle_toggle()<CR>", {noremap = true, silent = true})
+
 vim.g.godot_executable = '/Applications/Godot.app'
 
-require("nvim-tree").setup({
-	sync_root_with_cwd = true 
+require("nvim-tree").setup({ 
+	sync_root_with_cwd = true, 
+	view = { 
+		float = { 
+			enable = true ,
+			open_win_config = {
+				border = "none"
+			}
+		}
+	}
 })

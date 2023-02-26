@@ -1,3 +1,2 @@
 vim.api.nvim_command('autocmd VimEnter * :cd ~/Downloads/programming/')
 vim.api.nvim_command('autocmd VimEnter * :normal CD')
-vim.api.nvim_command('autocmd VimEnter * :NvimTreeOpen')

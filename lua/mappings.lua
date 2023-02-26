@@ -3,7 +3,7 @@ vim.api.nvim_command('map! <D-v> <C-R>+')
 vim.g.mapleader = ' '
 
 vim.api.nvim_set_keymap( "n", "<leader>ter", ":ToggleTerm<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap( "n", "<leader>fil", ":NvimTreeFocus<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap( "n", "<leader>fil", ":NvimTreeToggle<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap( "n", "<leader>out", ":w | qa!<CR>", {noremap = true, silent = true})
 
 local builtin = require('telescope.builtin')
