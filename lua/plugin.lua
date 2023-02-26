@@ -12,9 +12,9 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 require('packer').startup(function(use)
-
-	use 'wbthomason/packer.nvim'
-	use 'tomasr/molokai'
+use 'wbthomason/packer.nvim'
+	use 'sainnhe/sonokai'
+	use 'NLKNguyen/papercolor-theme'
 	use 'tpope/vim-surround'
 	use 'tpope/vim-commentary'
 	use 'vim-airline/vim-airline'
@@ -23,6 +23,9 @@ require('packer').startup(function(use)
 
 	use "akinsho/toggleterm.nvim"
 	use "nvim-lua/plenary.nvim"
+	use 'habamax/vim-godot'
+
+	use 'mhinz/vim-startify'
 
 	use {
 		'nvim-tree/nvim-tree.lua',
@@ -47,8 +50,11 @@ end
 
 require("toggleterm").setup({
 	size=20,
-	open_mapping=[[c-\]],
 	direction="float"
 })
 
-require("nvim-tree").setup({ view = {float = { enable = true }}, sync_root_with_cwd = true })
+vim.g.godot_executable = '/Applications/Godot.app'
+
+require("nvim-tree").setup({
+	sync_root_with_cwd = true 
+})
