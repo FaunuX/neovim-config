@@ -16,3 +16,4 @@ This is a repository for my Neovim configuration. It uses:
 | ter | :ToggleTerm |
 | out | :w + :qa! |
 | wor | Launching Wordle |
+| git | :Git add . + :Git commit + :Git push |
