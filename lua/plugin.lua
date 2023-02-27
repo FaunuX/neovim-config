@@ -27,6 +27,7 @@ require('packer').startup(function(use)
 	use 'mhinz/vim-startify'
 
 	use 'tpope/vim-fugitive'
+	use 'neovim/nvim-lspconfig'
 
 	use {
 		'nvim-tree/nvim-tree.lua',
@@ -51,8 +52,7 @@ require('packer').startup(function(use)
 end)
 
 if install_plugins then
-	return
-end
+	return end
 
 require("toggleterm").setup({
 	size=20,
@@ -87,3 +87,6 @@ require('lualine').setup {
 		theme = 'tokyonight'
 	}
 }
+
+require'lspconfig'.pyright.setup{}
+require'lspconfig'.rust_analyzer.setup{}

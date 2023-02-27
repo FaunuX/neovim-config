@@ -17,3 +17,4 @@ This is a repository for my Neovim configuration. It uses:
 | out | :w + :qa! |
 | wor | Launching Wordle |
 | git | :Git add . + :Git commit + :Git push |
+| def | Go to Definition |
