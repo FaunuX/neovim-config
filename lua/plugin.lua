@@ -15,6 +15,7 @@ require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	use 'sainnhe/sonokai'
 	use 'NLKNguyen/papercolor-theme'
+	use 'folke/tokyonight.nvim'
 	use 'tpope/vim-surround'
 	use 'tpope/vim-commentary'
 	use 'vim-airline/vim-airline'
