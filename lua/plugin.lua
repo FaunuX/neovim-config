@@ -13,8 +13,6 @@ end
 
 require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
-	use 'sainnhe/sonokai'
-	use 'NLKNguyen/papercolor-theme'
 	use 'folke/tokyonight.nvim'
 	use 'tpope/vim-surround'
 	use 'tpope/vim-commentary'
@@ -28,6 +26,8 @@ require('packer').startup(function(use)
 
 	use 'mhinz/vim-startify'
 
+	use 'tpope/vim-fugitive'
+
 	use {
 		'nvim-tree/nvim-tree.lua',
 		requires = {
@@ -38,6 +38,11 @@ require('packer').startup(function(use)
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
 
 	if install_plugins then
@@ -76,3 +81,9 @@ require("nvim-tree").setup({
 		}
 	}
 })
+
+require('lualine').setup {
+	options = {
+		theme = 'tokyonight'
+	}
+}
