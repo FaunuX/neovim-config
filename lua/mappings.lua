@@ -15,8 +15,8 @@ vim.g.mapleader = ' '
 vim.api.nvim_set_keymap( "n", "<leader>ter", ":ToggleTerm<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap( "n", "<leader>fil", ":NvimTreeToggle<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap( "n", "<leader>out", ":w | qa!<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap( "n", "<leader>tem", ":lua toggle_theme<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap( "n", "<leader>git", ":Git add . | Git commit | Git push<CR>", {noremap = true, silent = true})
+vim.keymap.set( "n", "<leader>tem", toggle_theme, {noremap = true, silent = true})
+vim.api.nvim_set_keymap( "n", "<leader>git", ":Git add . | Git commit | !git push<CR>", {noremap = true, silent = true})
 vim.keymap.set( "n", "<leader>def", vim.lsp.buf.definition, { noremap=true, silent=true, buffer=bufnr })
 
 local builtin = require('telescope.builtin')

@@ -18,3 +18,4 @@ This is a repository for my Neovim configuration. It uses:
 | wor | Launching Wordle |
 | git | :Git add . + :Git commit + :Git push |
 | def | Go to Definition |
+| par | curl parrot.live |
