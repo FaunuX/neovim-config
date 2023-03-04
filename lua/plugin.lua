@@ -60,7 +60,7 @@ require("toggleterm").setup({
 })
 
 local Terminal  = require('toggleterm.terminal').Terminal
-local wordle = Terminal:new({ cmd = "ssh clidle.duckdns.org -p 3000", hidden = true })
+local wordle = Terminal:new({ cmd = "~/go/bin/clidle", hidden = true })
 local parrot = Terminal:new({ cmd = "curl parrot.live", hidden = true })
 
 function _wordle_toggle()
