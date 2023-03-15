@@ -26,6 +26,7 @@ require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
 	use 'neovim/nvim-lspconfig'
 	use 'lukas-reineke/indent-blankline.nvim'
+	use 'airblade/vim-rooter'
 
 	use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
 	use {
@@ -54,27 +55,7 @@ if install_plugins then
 	return 
 end
 
-require("toggleterm").setup({
-	size=20,
-	direction="float"
-})
-
-local Terminal  = require('toggleterm.terminal').Terminal
-local wordle = Terminal:new({ cmd = "~/go/bin/clidle", hidden = true })
-local parrot = Terminal:new({ cmd = "curl parrot.live", hidden = true })
-
-function _wordle_toggle()
-	wordle:toggle()
-end
-
-function _parrot_toggle()
-	parrot:toggle()
-end
-
-
 vim.g.godot_executable = '/Applications/Godot.app'
-vim.api.nvim_set_keymap("n", "<leader>wor", "<cmd>lua _wordle_toggle()<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>par", "<cmd>lua _parrot_toggle()<CR>", {noremap = true, silent = true})
 
 require("nvim-tree").setup({ 
 	sync_root_with_cwd = true, 
