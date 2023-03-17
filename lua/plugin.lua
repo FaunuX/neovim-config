@@ -19,7 +19,6 @@ require('packer').startup(function(use)
 
 	use "akinsho/toggleterm.nvim"
 	use "nvim-lua/plenary.nvim"
-	use 'habamax/vim-godot'
 
 	use 'mhinz/vim-startify'
 

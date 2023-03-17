@@ -31,7 +31,7 @@ function _parrot_toggle()
 end
 
 function _ipython_toggle()
-	parrot:toggle()
+	ipython:toggle()
 end
 
 
