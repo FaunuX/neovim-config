@@ -26,6 +26,7 @@ require('packer').startup(function(use)
 	use 'neovim/nvim-lspconfig'
 	use 'lukas-reineke/indent-blankline.nvim'
 	use 'airblade/vim-rooter'
+	use 'wfxr/minimap.vim'
 
 	use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
 	use {

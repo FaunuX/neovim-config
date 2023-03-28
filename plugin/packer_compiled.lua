@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/judah/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["minimap.vim"] = {
+    loaded = true,
+    path = "/Users/judah/.local/share/nvim/site/pack/packer/start/minimap.vim",
+    url = "https://github.com/wfxr/minimap.vim"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/judah/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -153,11 +158,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/judah/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-godot"] = {
-    loaded = true,
-    path = "/Users/judah/.local/share/nvim/site/pack/packer/start/vim-godot",
-    url = "https://github.com/habamax/vim-godot"
   },
   ["vim-rooter"] = {
     loaded = true,
